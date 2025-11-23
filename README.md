@@ -5,10 +5,41 @@
 - Evaluation: Recall@20/50 and NDCG@20/50 on leave-one-out splits; per-epoch histories and plots.
 
 
+#### To Create virtual environment 
+
+```
+python -m venv .venv
+```
+#### For Macos/Linux
+
+```
+source .venv/bin/active
+```
+
+#### For Windows
+
+```
+.\venv\Scripts\Activate.ps1
+```
+
+#### To Install packages
 ```
 pip install -r requirements.txt
+```
+#### To Download datasets
+```
+python data.py --<dataset name>
+```
+
+```
+python preprocessing.py --dataset <dataset name>
+```
+
+#### To Run Models
+```
 python run.py --dataset amazon --model lightgcn --epochs 50 --eval-every 5
 ```
+
 
 Run every model
 ```
